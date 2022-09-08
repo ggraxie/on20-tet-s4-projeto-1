@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  /* define que as imagens tem que ter o tamanho máximo da div mãe */
+  .img-responsive {
+    width: 100%;
+    height: 100%;
+    /* garante que a imagem vai ocupar todo o conteúdo da div sem distorce */
+    object-fit: cover;
+  }
+  
+
+  .navbar {
+    background-image: linear-gradient(rgba(253, 253, 121, 0.815),rgba(103, 159, 223, 0.349));
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+  }
+  
+  .navbar__logo {
+    max-width: 200px;
+  }
+  
+  .navbar__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .navbar__nav {
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+  }
+  
+  .navbar__nav > li {
+    margin: 0 16px;
+    font-weight: bold;
+  }
+  
+  .navbar__nav--hamburguer {
+    display: none;
+  }
+  
+  .header {
+    min-height: 77vh;
+    width: 100%;
+    background-size: cover;
+    background-image:  url(https://tm.ibxk.com.br/2022/07/25/25110421665105.jpg?ims=1200x675);
+    display: flex;
+    
+  }
+  
+  .header__box {
+    max-width: 526px;
+    position: relative;
+    top: 350px;
+    background-color: #f5e344;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: #292a2a;
+  }
+  
+  .header__box--titulo {
+    font-size: 50px;
+    color: #f8ec47;
+  }
+  
+  .header__box--subtitulo {
+    font-size: 50px;
+    margin: 24px 0;
+  }
+  
+  /* define o tamanho da caixa */
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 2000px;
+    height: 500px;
+    background-color: #0a4f8f;
+
+    
+    
+  }
+  
+  /* --- FOOTER --- */
+  
+  .rodape {
+    background-color: #e6f0ec9a;
+    color: rgb(230, 225, 225);
+  }
+  
+  .rodape__principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rodape__principal > * {
+    margin: 16px 0;
+  }
+  
+  .rodape__navegacao > li {
+    font-size: 14px;
+    margin: 8px;
+  }
+  
+  .rodape__navegacao a {
+    transition: all 0.5s;
+  }
+  
+  .rodape__navegacao a:hover {
+    color: #f1e758;
+  }
+  
+  .rodape__logo {
+    max-width: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rodape__redes-sociais a{
+   margin: 0 4px;
+  }
+  
+  .rodape__cc {
+    width: 100%;
+    background-color: #fbffff;
+    font-size: 14px;
+    opacity: 0.5;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* --- BOTAO --- */
+  
+  .btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 50px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .btn_roxo {
+    color: white;
+    background-color: #ebe052;
+    display: block;
+    max-width: 200px;
+    text-align: center;
+    transition: all 0.5s;
+    margin: 0 auto;
+  }
+  
+  .btn_roxo:hover,
+  .btn_roxo:focus {
+    transform: translateY(-06px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(245, 230, 94);
+  }
+  
+  
+  /* --- SECTION MARAVILHOSAS --- */
+  
+  .maravilhosas__titulo {
+    color: #f8e57bb6;
+    font-size: 80px;
+    text-align: left;
+    margin: 30px 20px;
+    
+    
+  }
+  
+  .maravilhosas__box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: justify;
+    color: #fdfbff;
+    margin-bottom: 500px;
+  }
+  
+  .maravilhosas__perfil {
+    margin: 2rem;
+    text-align: justify;
+    cursor: pointer;
+    width: 800px;
+    height: 160px;
+  }
+  
+  .maravilhosas__perfil img {
+    border-radius: 10px;
+  }
+  
+  .maravilhosas__perfil a img {
+    transition: all 0.5s;
+  
+  }
+  
+  
+  @media (max-width: 1440px) {
+    .header__box {
+      top: 300px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 80vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar__nav {
+      display: none;
+    }
+    .navbar__nav--hamburguer {
+      display: block;
+      height: 76px;
+    }
+    .navbar {
+      height: 96px;
+    }
+    .navbar__logo {
+      max-width: 196px;
+    }
+  
+    .rodape__principal {
+      flex-direction: calc(70px 20px);
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .header__box {
+      top: 250px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .header__box {
+      top: 180px;
+      
+    }
+  }
+ .joutfoto{
+height: 60px;
+ }
